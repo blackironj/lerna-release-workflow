@@ -1,10 +1,10 @@
 {
   "name": "lerna-release-workflow",
   "private": true,
-  "author": "Jon Wahlström <ejfwahlstrom@gmail.com>",
+  "author": "blackironj",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonwa/lerna-release-workflow.git"
+    "url": "https://github.com/blackironj/lerna-release-workflow.git"
   },
   "workspaces": [
     "packages/*"
