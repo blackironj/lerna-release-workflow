@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/blackironj/lerna-release-workflow/compare/@blackironj/package-b@0.2.0...@blackironj/package-b@0.3.0) (2023-03-03)
+
+
+### Features
+
+* add console log to pkg b ([de776e4](https://github.com/blackironj/lerna-release-workflow/commit/de776e4c5306091fbd3a702416c381a7fd8bcbc3))
+
+
+
+
+
 # 0.2.0 (2023-03-03)
 
 
