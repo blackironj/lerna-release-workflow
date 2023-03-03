@@ -16,12 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          registry-url: 'https://npm.pkg.github.com'
-
-      - name: Config git user
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          node-version: '14'
 
       - name: Bootstrap lerna
         run: |
@@ -30,8 +25,10 @@ jobs:
 
       - name: Bump versions and publish packages
         run: |
-          yarn version:ci
-          yarn publish:ci
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+
+          npx lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish
+          npx lerna publish from-git --yes
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
