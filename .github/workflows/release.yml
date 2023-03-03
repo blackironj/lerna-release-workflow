@@ -33,4 +33,4 @@ jobs:
           npx lerna publish from-package --yes
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
-          NODE_AUTH_TOKEN: ${{ secret.GH_TOKEN_FOR_LERNA }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
