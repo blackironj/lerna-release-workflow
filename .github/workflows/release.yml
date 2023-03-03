@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-          npx lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish
+          npx lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'
           npx lerna publish from-git --yes
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
