@@ -16,13 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
-          token: ${{ secrets.GH_TOKEN_FOR_LERNA }}
-
-      - name: Ensure access
-        run: npm whoami --registry https://npm.pkg.github.com/
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
+          registry-url: 'https://npm.pkg.github.com'
 
       - name: Config git user
         run: |
@@ -40,3 +34,4 @@ jobs:
           yarn publish:ci
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN_FOR_LERNA }}
