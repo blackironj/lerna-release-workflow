@@ -3,5 +3,4 @@
 module.exports = packageB;
 
 function packageB() {
-  print('i am package B')
 }
